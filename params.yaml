@@ -1,0 +1,8 @@
+AUGMENTATION: True
+IMAGE_SIZE: [224,224,3] # as per vgg 16 model
+BATCH_SIZE: 16
+INCLUDE_TOP: False #only convo layer
+EPOCHS: 2
+CLASSES: 2 #op classes
+WEIGHTS: imagenet #downloading pretrain model
+LEARNING_RATE: 0.01
