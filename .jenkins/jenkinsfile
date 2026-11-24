@@ -42,7 +42,7 @@ pipeline {
         stage('Continous Deployment'){
             steps {
                 sshagent(['ssh_key']) {
-                    sh "ssh -o StrictHostKeyChecking=no -1 ubuntu 44.215.220.137 'cd/home/ubuntu/ && wget https:raw. && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region ap-southeast-2 | docker login --username aws --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-2.amazon.com && docker compose up -d'"
+                    sh "ssh -o StrictHostKeyChecking=no -1 ubuntu 13.237.104.252 'cd/home/ubuntu/ && wget https://raw.githubusercontent.com/safiya0604/image-classification-end2end-DeepLearning-/refs/heads/main/docker-compose.yml && export IMAGE_NAME=${ECR_REPOSITORY}:latest && aws ecr get-login-password --region ap-southeast-2 | docker login --username aws --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.ap-southeast-2.amazon.com && docker compose up -d'"
                 }
             }
         }
