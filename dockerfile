@@ -1,6 +1,6 @@
 FROM python:3.11-slim
 
-RUN apt -update -y && apt install awscli -y
+RUN apt-get update && apt install -y awscli 
 WORKDIR /app
 
 COPY . /app
