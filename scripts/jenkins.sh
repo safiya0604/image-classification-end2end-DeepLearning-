@@ -3,7 +3,7 @@ sudo apt update
 
 sudo apt install openjdk-8-jdk -y
 https://pkg.jenkins.io/
-https://pkg.jenkins.io/devian-stable/
+https://pkg.jenkins.io/debian-stable/
 sudo systemctl start jenkins
 
 sudo ststemctl enable jenkins
@@ -28,4 +28,4 @@ aws configure
 #now setup elastic IP ON AWS
 
 ###For getting the admin password for jenkins
-sudo cat /var/lib/jenkins/secrets/initiateAdminPassword
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
